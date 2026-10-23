@@ -1,5 +1,5 @@
 app:
-  title: Scaffolded Backstage App
+  title: KODEGAS Backstage
   baseUrl: http://localhost:3000
 
   # Enable all packages by default, this will discover packages from packages/app/package.json
@@ -95,7 +95,7 @@ app:
               height: 4
 
 organization:
-  name: My Company
+  name: KODEGAS
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -169,13 +169,12 @@ auth:
     github:
       development:
         clientId: ${GITHUB_CLIENT_ID}
-        clientSecret: ${GITHUB_CLIENT_SECRET}
-        audience: 'api://default'
+        clientSecret: ${GITHUB_CLIENT_SECRET
         signIn:
           resolvers:
-            # Matches the immutable GitHub user ID with the Backstage user entity.
+            # Matches the GitHub username with the Backstage User entity name.
             # See https://backstage.io/docs/auth/github/provider#resolvers for more resolvers.
-            - resolver: userIdMatchingUserEntityAnnotation
+            - resolver: usernameMatchingUserEntityName
         # Optional: restrict which `client_id` URLs are allowed (defaults to ['*'])
         # allowedClientIdPatterns:
         #   - 'https://example.com/*'
