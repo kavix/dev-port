@@ -169,7 +169,7 @@ auth:
     github:
       development:
         clientId: ${GITHUB_CLIENT_ID}
-        clientSecret: ${GITHUB_CLIENT_SECRET
+        clientSecret: ${GITHUB_CLIENT_SECRET}
         signIn:
           resolvers:
             # Matches the GitHub username with the Backstage User entity name.
