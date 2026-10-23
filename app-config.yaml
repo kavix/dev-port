@@ -172,9 +172,9 @@ auth:
         clientSecret: ${GITHUB_CLIENT_SECRET}
         signIn:
           resolvers:
-            # Matches the GitHub username with the Backstage User entity name.
+            # Matches GitHub's immutable user ID with the catalog User annotation.
             # See https://backstage.io/docs/auth/github/provider#resolvers for more resolvers.
-            - resolver: usernameMatchingUserEntityName
+            - resolver: userIdMatchingUserEntityAnnotation
         # Optional: restrict which `client_id` URLs are allowed (defaults to ['*'])
         # allowedClientIdPatterns:
         #   - 'https://example.com/*'
